@@ -1,2 +1,6 @@
-<h1>Cocktails#new</h1>
+<h1>Create a Cocktails</h1>
 <p>Find me in app/views/cocktails/new.html.erb</p>
+
+<%= render 'form', cocktail: @cocktail %>
+
+<%= link_to 'Back', cocktails_path %>
