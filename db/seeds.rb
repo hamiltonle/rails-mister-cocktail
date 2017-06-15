@@ -10,4 +10,10 @@ puts "creating seeds"
 Cocktail.create(name: "Mojito")
 Cocktail.create(name: "Gin and Tonic")
 Cocktail.create(name: "Old Fashion")
+
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+
 puts "Finished seeding"
