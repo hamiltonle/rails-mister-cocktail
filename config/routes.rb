@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :cocktails do
     resources :doses, only: [:new, :create]
   end
@@ -18,4 +20,15 @@ Rails.application.routes.draw do
   # get 'cocktails/create'
   # GET "cocktails/new"
   # POST "cocktails"
+
+  # A user can add a new dose (ingredient/description pair) on an existing cocktail.
+  # get 'doses/new'
+  # POST "cocktails/42/doses"
+
+  # user can delete a dose on an existing cocktail
+  # DELETE "doses/25"
+
+
+
+
 end
