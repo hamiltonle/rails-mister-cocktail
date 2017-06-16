@@ -1,29 +1,38 @@
-<h1><%= @cocktail.name %></h1>
-<p>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+
+        <h1><%= @cocktail.name %></h1>
+
+
+          <div class="cocktail_card col-xs-8 col-xs-offset-2">
+
+            <div class="col-xs-6">
+              <% if @cocktail.photo? %>
+                <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+              <% end %>
+            </div>
+            <div class="col-xs-6">
+              <% @cocktail.doses.each do |dose| %>
+                <h2><%= dose.description %>...
+                <%= dose.ingredient.name %>
+                <%= link_to "X", dose_path(dose), method: :delete, class: "btn btn-sm btn-danger" %></h2>
+                <br>
+              <% end %>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
+<div class="text-center">
+  <%= link_to 'add a new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
+  <br>
 
-
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.ingredient.name %><br>
-  <%= dose.description %><br>
-
-  <%= link_to "remove", dose_path(dose), method: :delete, class: "btn btn-danger" %><br><br>
-
-
-<% end %>
-
-<% if @cocktail.photo? %>
-  <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
-
-
-
-
-</p>
-
-<%= link_to 'add a new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
-<br>
-
-<%= link_to 'Back', cocktails_path %>
+  <%= link_to 'Back', cocktails_path %>
+</div>

@@ -10,6 +10,17 @@ puts "creating seeds"
 Cocktail.create(name: "Mojito")
 Cocktail.create(name: "Gin and Tonic")
 Cocktail.create(name: "Old Fashion")
+Cocktail.create(name: "Black and Tan")
+Cocktail.create(name: "Black Velvet")
+Cocktail.create(name: "Boilermaker")
+Cocktail.create(name: "Hangman's Blood")
+Cocktail.create(name: "Irish Car Bomb")
+Cocktail.create(name: "Michelada")
+Cocktail.create(name: "Porchcrawler")
+Cocktail.create(name: "Sake Bomb")
+Cocktail.create(name: "Shandy")
+Cocktail.create(name: "Snakebite")
+Cocktail.create(name: "U-Boot")
 
 
 Ingredient.create(name: "lemon")
