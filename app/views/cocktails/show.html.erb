@@ -4,14 +4,20 @@
 
 
 
+
 <% @cocktail.doses.each do |dose| %>
   <%= dose.ingredient.name %><br>
-  <%= dose.description %><br><br>
+  <%= dose.description %><br>
 
-  <%# link_to "remove", dose_path(dose), method: :delete %>
+  <%= link_to "remove", dose_path(dose), method: :delete, class: "btn btn-danger" %><br><br>
 
 
 <% end %>
+
+<% if @cocktail.photo? %>
+  <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>
+
 
 
 

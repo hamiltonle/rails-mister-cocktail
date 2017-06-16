@@ -2,12 +2,13 @@ Rails.application.routes.draw do
 
 
   resources :cocktails do
-    resources :doses
-    # resources :doses, only: [:new, :create, :show]
+    resources :doses, only: [:new, :create]
   end
 
-  # resources :doses, only: [:destroy]
+  resources :doses, only: [:destroy]
   root 'cocktails#index'
+
+  mount Attachinary::Engine => "/attachinary"
 
   # A user can see the list of all cocktails
   # get 'cocktails/index'

@@ -15,5 +15,10 @@ Cocktail.create(name: "Old Fashion")
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-
+Ingredient.create(name: "beer")
+Ingredient.create(name: "lime")
+Ingredient.create(name: "coke")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "rum")
 puts "Finished seeding"

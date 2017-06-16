@@ -15,6 +15,15 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 # security
 gem 'figaro'
+# cloudinary
+# gem 'cloudinary'
+
+# Gemfile
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+# gem 'coffee-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
