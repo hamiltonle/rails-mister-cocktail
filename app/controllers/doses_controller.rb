@@ -7,7 +7,7 @@ class DosesController < ApplicationController
   end
 
   def create
-    @dose = Dose.new(dose_params)
+    @dose = Dose.new (dose_params)
     # we need `cocktail_id` to asssociate review with corresponding restaurant
     @dose.cocktail = Cocktail.find(params[:cocktail_id])
 
