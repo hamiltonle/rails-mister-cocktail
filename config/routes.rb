@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :doses, only: [:destroy]
+  root 'cocktails#index'
 
   # A user can see the list of all cocktails
   # get 'cocktails/index'
